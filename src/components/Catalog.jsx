@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Catalog.css"
+import { Link } from "react-router-dom";
 
-function Catalog() {
+function Catalog(food) {
   const [foods, setFoods] = useState([]);
  
   const API_URL = "http://localhost:5005/food" 
@@ -26,7 +27,9 @@ function Catalog() {
         <div key={food.id}>
           <h1>{food.name}</h1>
           <img src={food.image} alt={food.name} />
-          {/* <p>{food.instructions}</p> */}
+
+          <Link to={`/food/${food.id}`}><button>details</button></Link>
+          
           <p>dish origin: {food.country}</p>
         </div>
       ))}
