@@ -1,0 +1,101 @@
+.homepagebox {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  max-width: 1200px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: auto;
+}
+
+.food-manager-app {
+  background-image: url("./src/images/luxuryfood.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 100px;
+  padding-top: 100px;
+  width: 800px;
+}
+
+.app-title {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.app-title h1 {
+  color: rgb(0, 0, 0);
+  text-shadow: rgba(255, 255, 255, 1) 0px 0px 5px;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.app-title p {
+  color: rgb(255, 255, 255);
+  text-shadow: rgb(0, 0, 0) 0px 0px 5px;
+  font-size: 18px;
+  margin-bottom: 60px;
+  font-weight: lighter;
+}
+
+.function-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.little-box {
+  width: 200px;
+  height: 90px;
+  text-align: center;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  border-top-left-radius: 5px;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 10px; /* Fix spacing issue and add shadow */
+  margin-bottom: 25px;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.little-box h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.little-box p {
+  font-size: 10px;
+}
+
+footer {
+  background-color: black;
+  color: whitesmoke;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+footer h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+footer p {
+  font-size: 18px;
+  font-weight: lighter;
+  margin-bottom: 10px;
+}
