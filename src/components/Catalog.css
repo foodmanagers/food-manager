@@ -1,0 +1,17 @@
+.catalog-list{
+  
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+
+
+}
+
+img {
+
+width: 20%;
+height: auto;
+
+}
