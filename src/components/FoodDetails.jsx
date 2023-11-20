@@ -122,7 +122,6 @@ function FoodDetails() {
               </label>
               <button onClick={editSubmit}>Save Changes</button>
               <button onClick={editToggle}>Cancel Edit</button>
-              <button onClick={deleteFunction}>delete</button>
             </div>
           ) : (
             // Display mode
@@ -140,6 +139,7 @@ function FoodDetails() {
               ></iframe>
               <br />
               <button onClick={editToggle}>Edit Food Details</button>
+              <button onClick={deleteFunction}>delete</button>
               </>
                 ) : (
                     <p>loading...</p>
