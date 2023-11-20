@@ -123,7 +123,7 @@ function FoodDetails() {
               <button onClick={editSubmit}>Save Changes</button>
               <button onClick={editToggle}>Cancel Edit</button>
             </div>
-          ) : (
+          ) : ( 
             // Display mode
             <div>
                 {foodDetails ? (

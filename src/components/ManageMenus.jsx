@@ -2,12 +2,11 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Catalog.css";
 import { Link } from "react-router-dom";
-import Catalog from "./Catalog"
+import Catalog from "./Catalog";
 
-
-function ManageMenus() {
+function ManageMenus({admin}) {
   const [foods, setFoods] = useState([]);
-
+  console.log(admin)
   const API_URL = "http://localhost:5005/food";
 
   const getAllMenus = () => {
@@ -26,29 +25,22 @@ function ManageMenus() {
   }, []);
 
   return (
-    
     <div className="catalog-list">
       <>
-      <h2>Menus</h2>
-      <br />
-      <Catalog />
-      
-      <Link to="/managemenus/create">
-        <p>
-          <button>Create Menu</button>
-        </p>
-      </Link>
+        <h2>Menus</h2>
+        <br />
+        <Catalog />
 
-      {foods.map((food) => {
-        <div className="menucard" key={food.id}>
-          <Link to={`/foods/${food.id}`}>
-            <h3>{food.name}</h3>
+        {admin && (
+          <Link to="/managemenus/create">
+            <p>
+              <button>Create</button>
+            </p>
           </Link>
-        </div>;
-      })}
+        )}
+
       </>
     </div>
-    
   );
 }
 
