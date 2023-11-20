@@ -1,0 +1,16 @@
+#instructions-edit {
+  width: 100%;
+  min-height: 100px;
+  display: block;
+  margin: 0 auto;
+}
+
+input {
+  display: flex;
+  flex-direction: row;
+  margin: 25px;
+  justify-content: space-around;
+  border: 3px solid white;
+  height: 2em;
+  width: 50em;
+}
