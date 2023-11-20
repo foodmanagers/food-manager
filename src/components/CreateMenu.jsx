@@ -26,7 +26,7 @@ const handleSubmit = (e) => {
     }
     
     // POST request
-    axios.post(`${API_URL}/managemenus`, requestBody )
+    axios.post(`${API_URL}`, requestBody )
         .then( response => {
             // redirect
             navigate("/managemenus");

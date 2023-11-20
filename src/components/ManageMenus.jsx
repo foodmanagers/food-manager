@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Catalog.css";
 import { Link } from "react-router-dom";
+import Catalog from "./Catalog"
+
 
 function ManageMenus() {
   const [foods, setFoods] = useState([]);
@@ -24,9 +26,13 @@ function ManageMenus() {
   }, []);
 
   return (
+    
     <div className="catalog-list">
+      <>
       <h2>Menus</h2>
-
+      <br />
+      <Catalog />
+      
       <Link to="/managemenus/create">
         <p>
           <button>Create Menu</button>
@@ -40,7 +46,9 @@ function ManageMenus() {
           </Link>
         </div>;
       })}
+      </>
     </div>
+    
   );
 }
 
