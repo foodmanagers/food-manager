@@ -5,6 +5,8 @@ import HomePage from "./components/HomePage"
 import Catalog from "./components/Catalog"
 import ManageMenus from "./components/ManageMenus"
 import FoodDetails from './components/FoodDetails'
+import CreateMenu from './components/CreateMenu'
+
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/managemenus" element={<ManageMenus />} />
+          <Route path="/managemenus/create" element={<CreateMenu />} />
           <Route path="/food/:id" element={<FoodDetails />} />
           
     </Routes>
