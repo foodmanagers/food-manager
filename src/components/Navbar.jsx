@@ -1,17 +1,19 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
-
+import homeicon from '../assets/home-icon.png'
+import catalog from '../assets/catalog.png'
+import manager from '../assets/manager.png'
 function Navbar () {
     return (
         <nav className='Navbar'>
       <NavLink to="/" className="NavIcon">
-      <img src="src\assets\home-icon.png" alt="Home Icon" />
+      <img src={homeicon} alt="Home Icon" />
       </NavLink>
       <NavLink to="/catalog" className="CatalogIcon">
-      <img src="src\assets\catalog.png" alt="Catalog Icon" />
+      <img src={catalog} alt="Catalog Icon" />
       </NavLink>
       <NavLink to="/managemenus" className="ManagerIcon">
-      <img src="src\assets\manager.png" alt="Manager Icon" />
+      <img src={manager} alt="Manager Icon" />
       </NavLink>
     </nav>
     )
