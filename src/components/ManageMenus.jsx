@@ -25,12 +25,9 @@ function ManageMenus({admin}) {
   }, []);
 
   return (
-    <div className="catalog-list">
+    <div>
       <>
-        <h2>Menus</h2>
-        <br />
-        <Catalog />
-
+        <h1>Manager Menu</h1>
         {admin && (
           <Link to="/managemenus/create">
             <p>
@@ -38,6 +35,10 @@ function ManageMenus({admin}) {
             </p>
           </Link>
         )}
+        <hr />
+        <Catalog />
+
+        
 
       </>
     </div>
