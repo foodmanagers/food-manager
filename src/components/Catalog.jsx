@@ -25,12 +25,13 @@ function Catalog(food) {
     <div className='catalog-list'>
       {foods.map((food) => (
         <div key={food.id}>
-          <h1>{food.name}</h1>
+          <h2>{food.name}</h2>
           <img src={food.image} alt={food.name} />
+          <p>{food.country}</p>
 
           <Link to={`/food/${food.id}`}><button>details</button></Link>
           
-          <p>dish origin: {food.country}</p>
+          
         </div>
       ))}
     </div>
