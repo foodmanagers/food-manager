@@ -67,7 +67,7 @@ function FoodDetails({ admin }) {
   }, [foodDetails]);
 
   return (
-    <div>
+    <div className="details-page">
       {editMode ? (
         <div>
           <label>

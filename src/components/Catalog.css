@@ -1,7 +1,5 @@
-
-
-
 .catalog-list {
+  margin-top: 20px;
   list-style: none;
   padding: 0;
   display: grid;
@@ -9,14 +7,14 @@
   gap: 20px;
 }
 
-img {
+.catalog-list img {
   width: 100%;
   height: auto;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(56, 10, 7, 0.788) 0px 4px 6px -1px,
+    rgb(100, 37, 37) 0px 1px 0px inset;
 }
 
-h1{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-
-
-

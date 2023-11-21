@@ -27,7 +27,7 @@ function Catalog(food) {
         <div key={food.id}>
           <h2>{food.name}</h2>
           <img src={food.image} alt={food.name} />
-          <p>{food.country}</p>
+          
 
           <Link to={`/food/${food.id}`}><button>Details</button></Link>
           
