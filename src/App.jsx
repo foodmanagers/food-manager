@@ -15,7 +15,7 @@ function App() {
 
   const roleToggle = () => {
     console.log(admin)
-     // common pattern for toggling boolean values in React state-> (miracle, big big miracle, this solved the problem.)
+     // common pattern for toggling boolean values in React state-> (miracle, b-ig big miracle, this solved the problem.)
      setAdmin(!admin);
 
   }
@@ -28,12 +28,11 @@ function App() {
     <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/catalog" element={<Catalog />} />
-          {/* // Solved the button dont appearing even if the value was true, because it was passing undefined */}
           <Route path="/managemenus/create" element={<CreateMenu />} />
+          {/* // Solved the button dont appearing even if the value was true, because it was passing undefined */}
           <Route path="/managemenus" element={<ManageMenus admin={admin} />} /> 
-          <Route path="/food/:id" element={<FoodDetails />} />
-          
-    </Routes>
+          <Route path="/food/:id" element={<FoodDetails admin={admin} />} />
+          </Routes>
     
     </div>
     </>

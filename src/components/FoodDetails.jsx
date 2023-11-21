@@ -4,7 +4,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import './FoodDetails.css'
 
-function FoodDetails() {
+function FoodDetails({ admin }) {
   const [foodDetails, setFoodDetails] = useState([]);
   const [editMode, setEditMode] = useState(false);
   const { id } = useParams();
@@ -165,8 +165,14 @@ function FoodDetails() {
                 src="https://www.youtube.com/embed/tgbNymZ7vqY"
               ></iframe>
               <br />
-              <button onClick={editToggle}>Edit Food Details</button>
-              <button onClick={deleteFunction}>delete</button>
+
+              {admin && (
+                <>
+                  <button onClick={editToggle}>Edit</button>
+                  <button onClick={deleteFunction}>Delete</button>
+                </>
+              )}
+
             </>
           ) : (
             <p>loading...</p>
