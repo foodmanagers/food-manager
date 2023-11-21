@@ -28,9 +28,8 @@ function Catalog(food) {
           <h1>{food.name}</h1>
           <img src={food.image} alt={food.name} />
 
-          <Link to={`/food/${food.id}`}><button>details</button></Link>
+          <Link to={`/food/${food.id}`}><button>Details</button></Link>
           
-          <p>dish origin: {food.country}</p>
         </div>
       ))}
     </div>
