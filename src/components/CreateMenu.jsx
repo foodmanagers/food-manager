@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./CreateMenu.css";
 
-const API_URL = "http://localhost:5005/food";
+// const API_URL = "http://localhost:5005/food";
 
 function CreateMenu() {
   const [name, setName] = useState("");
@@ -16,7 +16,7 @@ function CreateMenu() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+  
     const requestBody = {
       name: name,
       country: country,
@@ -27,7 +27,7 @@ function CreateMenu() {
 
     // POST request
     axios
-      .post(`${API_URL}`, requestBody)
+      .post(import.meta.env.VITE_API_URL, requestBody)
       .then((response) => {
         // redirect
         navigate("/managemenus");

@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 function Catalog(food) {
   const [foods, setFoods] = useState([]);
  
-  const API_URL = "http://localhost:5005/food" 
+  // const API_URL = "http://localhost:5005/food" 
  
   useEffect(() => {
     axios
-      .get(API_URL)
+      .get(import.meta.env.VITE_API_URL)
       .then((response) => {
         setFoods(response.data);
       })

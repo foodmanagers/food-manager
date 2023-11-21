@@ -14,7 +14,7 @@ function FoodDetails({ admin }) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5005/food/${id}`)
+      .get(import.meta.env.VITE_API_URL + `/${id}`)
       .then((response) => {
         setFoodDetails(response.data);
       })
@@ -25,7 +25,7 @@ function FoodDetails({ admin }) {
 
   const deleteFunction = () => {
     axios
-      .delete(`http://localhost:5005/food/${id}`)
+      .delete(import.meta.env.VITE_API_URL + `/${id}`)
       .then(() => {
         navigate("/managemenus"); //--------> the miracle
       })
@@ -49,7 +49,7 @@ function FoodDetails({ admin }) {
 
     // Perform API call to update the food details
     axios
-      .put(`http://localhost:5005/food/${id}`, updatedData)
+      .put(import.meta.env.VITE_API_URL + `/${id}`, updatedData)
       .then((response) => {
         console.log("Food details updated successfully:", response.data);
       })

@@ -7,11 +7,11 @@ import Catalog from "./Catalog";
 function ManageMenus({admin}) {
   const [foods, setFoods] = useState([]);
   console.log(admin)
-  const API_URL = "http://localhost:5005/food";
+  // const VITE_API_URL = "http://localhost:5005/food";
 
   const getAllMenus = () => {
     axios
-      .get(API_URL)
+      .get(import.meta.env.VITE_API_URL)
       .then((response) => {
         setFoods(response.data);
       })
