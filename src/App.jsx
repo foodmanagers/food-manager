@@ -23,7 +23,7 @@ function App() {
   return (
     <>
     <div className='App'>
-    <Navbar callbackToAdmin={roleToggle} />
+    <Navbar callbackToAdmin={roleToggle} admin={admin} />
 
     <Routes>
           <Route path="/" element={<HomePage />} />
