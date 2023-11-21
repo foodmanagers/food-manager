@@ -4,7 +4,7 @@ import homeicon from "../assets/home-icon.png";
 import catalog from "../assets/catalog.png";
 import manager from "../assets/manager.png";
 
-function Navbar( {callbackToAdmin, admin} ) {
+function Navbar({ callbackToAdmin, admin }) {
   return (
     <nav className="Navbar">
       <NavLink to="/" className="NavIcon">
@@ -15,10 +15,14 @@ function Navbar( {callbackToAdmin, admin} ) {
         <img src={catalog} alt="Catalog Icon" />
       </NavLink>
 
-       {admin && (
-      <NavLink to="/managemenus" className="ManagerIcon">
-        <img src={manager} alt="Manager Icon" />
+      <NavLink to="/cart">
+        <img src={catalog} alt="Catalog Icon" />
       </NavLink>
+
+      {admin && (
+        <NavLink to="/managemenus" className="ManagerIcon">
+          <img src={manager} alt="Manager Icon" />
+        </NavLink>
       )}
 
       <button onClick={callbackToAdmin}>Admin</button>

@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import './FoodDetails.css'
+import "./FoodDetails.css";
 
 function FoodDetails({ admin }) {
   const [foodDetails, setFoodDetails] = useState([]);
@@ -119,7 +119,8 @@ function FoodDetails({ admin }) {
 
           <label>
             Instructions:
-            <textarea id='instructions-edit'
+            <textarea
+              id="instructions-edit"
               type="text"
               name="instructions"
               value={foodDetails.instructions}
@@ -147,6 +148,7 @@ function FoodDetails({ admin }) {
               }
             />
           </label>
+
           <button onClick={editSubmit}>Save Changes</button>
           <button onClick={editToggle}>Cancel Edit</button>
         </div>
@@ -172,7 +174,6 @@ function FoodDetails({ admin }) {
                   <button onClick={deleteFunction}>Delete</button>
                 </>
               )}
-
             </>
           ) : (
             <p>loading...</p>
