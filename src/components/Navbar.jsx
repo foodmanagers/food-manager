@@ -9,26 +9,27 @@ function Navbar({ callbackToAdmin, admin }) {
   return (
     <div>
 
-      <div className="navbar bg-base-100 fixed top-0 left-0 right-0">
+      <div className="navbar bg-base-100 fixed top-0 left-0 right-0 pb-5">
         <div className="flex-1">
-          <a className="btn btn-ghost text-xl">
+          <button className="btn btn-ghost text-xl">
             <NavLink to="/">
-              <img src={homeicon} alt="Home Icon" />
+              <img className="w-10" src={homeicon} alt="Home Icon" />
             </NavLink>
-          </a>
-          <a className="btn btn-ghost text-xl">
+          </button>
+          <button className="btn btn-ghost text-xl">
             <NavLink to="/catalog">
-              <img className="w-10" src={catalog} alt="Catalog Icon" />
+              <img className="w-10 mb-8" src={catalog} alt="Catalog Icon" />
             </NavLink>
-          </a>
-          <a className="btn btn-ghost text-xl">
+          </button>
+           
           {admin && (
+            <button className="btn btn-ghost text-xl">
           <NavLink to="/managemenus" className="ManagerIcon">
-            <img className="w-12" src={manager} alt="Manager Icon" />
+          <img className="w-10" src={manager} alt="Manager Icon" />
           </NavLink>
+          </button>
         )}
-          </a>
-
+          
         </div>
         <div className="flex-none">
           <div className="dropdown dropdown-end">
