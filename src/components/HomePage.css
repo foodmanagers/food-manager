@@ -11,7 +11,7 @@
 }
 
 .food-manager-app {
-  background-image: url("./src/images/luxuryfood.jpg");
+  background-image: url ("../images/luxuryfood.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
