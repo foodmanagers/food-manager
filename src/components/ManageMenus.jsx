@@ -36,7 +36,7 @@ function ManageMenus({admin}) {
           </Link>
         )}
         <hr />
-        <Catalog />
+        <Catalog admin={admin} />
 
         
 

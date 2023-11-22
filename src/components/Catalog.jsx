@@ -4,7 +4,7 @@ import "./Catalog.css";
 import { Link } from "react-router-dom";
 import ShoppingCart from "./ShoppingCart";
 
-function Catalog({ addToCart, showAlert}) {
+function Catalog({ addToCart, showAlert, admin}) {
   const [foods, setFoods] = useState([]);
   console.log(showAlert)
 
@@ -33,7 +33,7 @@ function Catalog({ addToCart, showAlert}) {
             <button>Details</button>
           </Link>
 
-          <button onClick={() => addToCart(food)}>Add to Cart</button>
+          {!admin && <button onClick={() => addToCart(food)}>Add to Cart</button>}
         </div>
       ))}
       </div>
