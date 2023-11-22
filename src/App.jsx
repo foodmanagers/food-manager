@@ -12,6 +12,8 @@ import ShoppingCart from "./components/ShoppingCart";
 function App() {
   const [admin, setAdmin] = useState(false);
   const [cartItems, setCartItems] = useState([]);
+  const [showAlert, setShowAlert] = useState(false);
+
 
   const roleToggle = () => {
     console.log(admin);
@@ -21,6 +23,12 @@ function App() {
 
   const addToCart = (FoodDetails) => {
     setCartItems([...cartItems, FoodDetails]);
+
+    setShowAlert(true)  // show the sucess alert
+
+    setTimeout(() => {
+      setShowAlert(false)
+    }, 2000)   // timeout to hide the alert
   };
 
   const emptyCart = () => {
@@ -34,7 +42,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/catalog" element={<Catalog addToCart={addToCart} />} />
+          <Route path="/catalog" element={<Catalog addToCart={addToCart} showAlert={showAlert} />} />
           <Route path="/managemenus/create" element={<CreateMenu />} />
           {/* // Solved the button dont appearing even if the value was true, because it was passing undefined */}
           <Route path="/managemenus" element={<ManageMenus admin={admin} />} />

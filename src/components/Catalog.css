@@ -1,20 +1,74 @@
 .catalog-list {
-  margin-top: 20px;
-  list-style: none;
-  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.catalog-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
 }
 
-.catalog-list img {
-  width: 100%;
-  height: auto;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-    rgba(56, 10, 7, 0.788) 0px 4px 6px -1px,
-    rgb(100, 37, 37) 0px 1px 0px inset;
+.catalog-grid div {
+  border: 1px solid #5e5e5e; 
+  padding: 10px;
 }
 
-h1 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+.catalog-grid img {
+  max-width: 100%;
+  height: auto;
+}
+
+.catalog-grid h2 {
+  margin-bottom: 10px;
+}
+
+.catalog-grid button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.alert {
+  position: fixed;
+  bottom: 10px; 
+  left: 50%;
+  transform: translateX(-50%); /* Move the alert on x axys */
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 14px; 
+  max-width: 400px; 
+}
+
+.alert svg {
+  margin-right: 10px;
+}
+
+/*animation for better user experience */
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.alert-success {
+  animation: fadeInOut 3s ease; /* applies a fadein&out */
 }
