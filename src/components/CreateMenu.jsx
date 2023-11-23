@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./CreateMenu.css";
-
+import chef from "../assets/chef.png";
 
 function CreateMenu() {
   const [name, setName] = useState("");
@@ -38,8 +38,8 @@ function CreateMenu() {
   };
 
   return (
-    <div>
-
+    <div className="card w-96 glass mb-8 pt-6 bg-base-200">
+<figure><img  className="w-20 h-auto mb-6" src={chef}/></figure>
       <form onSubmit={handleSubmit} className="max-w-md mx-auto">
       <div className="relative z-0 w-full mb-5 group">
         <label>
@@ -114,7 +114,7 @@ function CreateMenu() {
         </div>
         
 
-        <button>Create Menu</button>
+        <button className="btn-sm btn-circle bg-blue-700">+</button>
       </form>
     </div>
   );
