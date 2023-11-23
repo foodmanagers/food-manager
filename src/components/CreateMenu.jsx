@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./CreateMenu.css";
 
-// const API_URL = "http://localhost:5005/food";
 
 function CreateMenu() {
   const [name, setName] = useState("");
@@ -16,7 +15,7 @@ function CreateMenu() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
+
     const requestBody = {
       name: name,
       country: country,
@@ -40,10 +39,11 @@ function CreateMenu() {
 
   return (
     <div className="CreateMenuPage">
-      <h3>Add Menu</h3>
+      <h1>Add Menu</h1>
 
       <form onSubmit={handleSubmit}>
         <label>
+          Name:
           <input
             type="text"
             name="name"
@@ -56,6 +56,7 @@ function CreateMenu() {
         <hr />
 
         <label>
+          Country of origin:
           <input
             type="text"
             name="country"
@@ -68,6 +69,7 @@ function CreateMenu() {
         <hr />
 
         <label>
+          How to make:
           <textarea
             id="instructions-create"
             type="text"
@@ -80,6 +82,7 @@ function CreateMenu() {
         <hr />
 
         <label>
+          Image:
           <input
             type="text"
             name="image"
@@ -91,6 +94,7 @@ function CreateMenu() {
         <hr />
 
         <label>
+          Youtube link:
           <input
             type="text"
             name="youtube"

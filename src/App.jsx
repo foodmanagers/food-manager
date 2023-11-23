@@ -16,8 +16,6 @@ function App() {
   const [showAlert, setShowAlert] = useState(false);
 
   const roleToggle = () => {
-    console.log(admin);
-    // common pattern for toggling boolean values in React state-> (miracle, b-ig big miracle, this solved the problem.)
     setAdmin(!admin);
   };
 
@@ -38,7 +36,11 @@ function App() {
   return (
     <>
       <div className="App">
-        <Navbar callbackToAdmin={roleToggle} admin={admin} cartItems={cartItems} />
+        <Navbar
+          callbackToAdmin={roleToggle}
+          admin={admin}
+          cartItems={cartItems}
+        />
 
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -47,7 +49,6 @@ function App() {
             element={<Catalog addToCart={addToCart} showAlert={showAlert} />}
           />
           <Route path="/managemenus/create" element={<CreateMenu />} />
-          {/* // Solved the button dont appearing even if the value was true, because it was passing undefined */}
           <Route path="/managemenus" element={<ManageMenus admin={admin} />} />
           <Route
             path="/food/:id"
@@ -59,7 +60,6 @@ function App() {
               <ShoppingCart cartItems={cartItems} emptyCart={emptyCart} />
             }
           />
-          
         </Routes>
         <Footer />
       </div>

@@ -2,15 +2,12 @@ import React from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import "./FoodDetails.css";
 
 function FoodDetails({ admin }) {
   const [foodDetails, setFoodDetails] = useState([]);
   const [editMode, setEditMode] = useState(false);
   const { id } = useParams();
   const navigate = useNavigate();
-
-  console.log(foodDetails);
 
   useEffect(() => {
     axios
@@ -27,7 +24,7 @@ function FoodDetails({ admin }) {
     axios
       .delete(import.meta.env.VITE_API_URL + `/${id}`)
       .then(() => {
-        navigate("/managemenus"); //--------> the miracle
+        navigate("/managemenus");
       })
       .catch((error) => {
         console.log(error);
@@ -62,14 +59,13 @@ function FoodDetails({ admin }) {
       });
   };
 
-  useEffect(() => {
-    console.log(foodDetails);
-  }, [foodDetails]);
+  useEffect(() => {}, [foodDetails]);
 
   return (
     <div>
       {editMode ? (
         <div>
+          <h1>Edit the Menu</h1>
           <label>
             Name:
             <input
@@ -86,7 +82,7 @@ function FoodDetails({ admin }) {
           </label>
           <hr />
           <label>
-            Country:
+            Country of origin:
             <input
               type="text"
               name="country"
@@ -118,9 +114,8 @@ function FoodDetails({ admin }) {
           <hr />
 
           <label>
-            Instructions:
+            How to make:
             <textarea
-              id="instructions-edit"
               type="text"
               name="instructions"
               value={foodDetails.instructions}
@@ -135,7 +130,7 @@ function FoodDetails({ admin }) {
           <hr />
 
           <label>
-            YouTube:
+            YouTube link:
             <input
               type="text"
               name="youtube"
@@ -151,32 +146,44 @@ function FoodDetails({ admin }) {
 
           <button onClick={editSubmit}>Save Changes</button>
           <button onClick={editToggle}>Cancel Edit</button>
-          </div>
+        </div>
       ) : (
-          // Display mode
-          <div   className="card lg:card-side bg-base-100 shadow-xl mt-10 mb-2">
-          <figure><img className="w-screen h-auto" src={foodDetails.image}/></figure>
-          
-          {foodDetails ? (
-           <div className="card-body">
-           <>
-              <h2 className="card-title justify-center">{foodDetails.name}</h2>
-              <p>{foodDetails.country}</p>
-              <p className="ml-8">{foodDetails.instructions}</p>
-              
-              <br />
+        // Display mode
+        <div className="card lg:card-side bg-base-100 shadow-xl mt-10 mb-2">
+          <figure>
+            <img className="w-screen h-auto" src={foodDetails.image} />
+          </figure>
 
-              {admin && (
-                <>
-                  <div className="card-actions justify-end">
-                  <button className="btn btn-primary mr-2" onClick={editToggle}>Edit</button>
-                  <button className="btn btn-primary ml-2" onClick={deleteFunction}>Delete</button>
-                  </div>
-                </>
-                
-              )}
-              
-            </>
+          {foodDetails ? (
+            <div className="card-body">
+              <>
+                <h2 className="card-title justify-center">
+                  {foodDetails.name}
+                </h2>
+                <p>{foodDetails.country}</p>
+                <p className="ml-8">{foodDetails.instructions}</p>
+
+                <br />
+
+                {admin && (
+                  <>
+                    <div className="card-actions justify-end">
+                      <button
+                        className="btn btn-primary mr-2"
+                        onClick={editToggle}
+                      >
+                        Edit
+                      </button>
+                      <button
+                        className="btn btn-primary ml-2"
+                        onClick={deleteFunction}
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  </>
+                )}
+              </>
             </div>
           ) : (
             <p>loading...</p>
