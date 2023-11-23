@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import chef from "../assets/chef.png"; 
 
 function FoodDetails({ admin }) {
   const [foodDetails, setFoodDetails] = useState([]);
@@ -64,13 +65,14 @@ function FoodDetails({ admin }) {
   return (
     <div>
       {editMode ? (
-        <div>
-          <h1>Edit the Menu</h1>
+        <div  className="card w-96 glass mb-8 pt-6 bg-base-200 pt-10">
+          <figure><img  className="w-20 h-auto mb-6" src={chef}/></figure>
+
           <label>
-            Name:
             <input
               type="text"
               name="name"
+              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               value={foodDetails.name}
               onChange={(e) =>
                 setFoodDetails((prev) => ({
@@ -80,12 +82,14 @@ function FoodDetails({ admin }) {
               }
             />
           </label>
+
           <hr />
+
           <label>
-            Country of origin:
             <input
               type="text"
               name="country"
+              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               value={foodDetails.country}
               onChange={(e) =>
                 setFoodDetails((prev) => ({
@@ -95,13 +99,14 @@ function FoodDetails({ admin }) {
               }
             />
           </label>
+
           <hr />
 
           <label>
-            Image:
             <input
               type="text"
               name="image"
+              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               value={foodDetails.image}
               onChange={(e) =>
                 setFoodDetails((prev) => ({
@@ -111,13 +116,14 @@ function FoodDetails({ admin }) {
               }
             />
           </label>
+
           <hr />
 
           <label>
-            How to make:
             <textarea
-              type="text"
+              type="text-area"
               name="instructions"
+              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               value={foodDetails.instructions}
               onChange={(e) =>
                 setFoodDetails((prev) => ({
@@ -130,10 +136,10 @@ function FoodDetails({ admin }) {
           <hr />
 
           <label>
-            YouTube link:
             <input
               type="text"
               name="youtube"
+              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               value={foodDetails.youtube}
               onChange={(e) =>
                 setFoodDetails((prev) => ({
@@ -144,8 +150,8 @@ function FoodDetails({ admin }) {
             />
           </label>
 
-          <button onClick={editSubmit}>Save Changes</button>
-          <button onClick={editToggle}>Cancel Edit</button>
+          <button className="glass mt-2 bg-blue-800" onClick={editSubmit}>Save</button>
+          <button className="glass mt-2 bg-blue-800" onClick={editToggle}>Cancel</button>
         </div>
       ) : (
         // Display mode
@@ -164,18 +170,19 @@ function FoodDetails({ admin }) {
                 <p className="ml-8">{foodDetails.instructions}</p>
 
                 <br />
-
+                
+                {/*buttons that appear with admin */}
                 {admin && (
                   <>
                     <div className="card-actions justify-end">
                       <button
-                        className="btn btn-primary mr-2"
+                        className="glass mt-2 bg-blue-800"
                         onClick={editToggle}
                       >
                         Edit
                       </button>
                       <button
-                        className="btn btn-primary ml-2"
+                        className="glass mt-2 bg-blue-800"
                         onClick={deleteFunction}
                       >
                         Delete

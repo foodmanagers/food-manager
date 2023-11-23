@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./CreateMenu.css";
 import chef from "../assets/chef.png";
 
 function CreateMenu() {
@@ -39,7 +38,7 @@ function CreateMenu() {
 
   return (
     <div className="card w-96 glass mb-8 pt-6 bg-base-200">
-<figure><img  className="w-20 h-auto mb-6" src={chef}/></figure>
+      <figure><img  className="w-20 h-auto mb-6" src={chef}/></figure>
       <form onSubmit={handleSubmit} className="max-w-md mx-auto">
       <div className="relative z-0 w-full mb-5 group">
         <label>
@@ -79,6 +78,7 @@ function CreateMenu() {
             name="instructions"
             className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder="enter instructions"
+            required={true}
             value={instructions}
             onChange={(e) => setInstructions(e.target.value)}
           />
@@ -92,6 +92,7 @@ function CreateMenu() {
             type="text"
             name="image"
             placeholder="enter image URL"
+            required={true}
             className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             value={image}
             onChange={(e) => setImage(e.target.value)}
@@ -114,7 +115,7 @@ function CreateMenu() {
         </div>
         
 
-        <button className="btn-sm btn-circle bg-blue-700">+</button>
+        <button className=" glass btn-sm btn-circle bg-blue-800">+</button>
       </form>
     </div>
   );
