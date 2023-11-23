@@ -38,72 +38,81 @@ function CreateMenu() {
   };
 
   return (
-    <div className="CreateMenuPage">
-      <h1>Add Menu</h1>
+    <div>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+      <div className="relative z-0 w-full mb-5 group">
         <label>
-          Name:
           <input
             type="text"
             name="name"
+            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder="enter the name"
             required={true}
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
         </label>
-        <hr />
+        </div>
+        
 
+        <div className="relative z-0 w-full mb-5 group">
         <label>
-          Country of origin:
           <input
             type="text"
             name="country"
+            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder="enter the country"
             required={true}
             value={country}
             onChange={(e) => setCountry(e.target.value)}
           />
         </label>
-        <hr />
+        </div>
+        
 
+        <div className="relative z-0 w-full mb-5 group">
         <label>
-          How to make:
           <textarea
             id="instructions-create"
-            type="text"
+            type="text-area"
             name="instructions"
+            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder="enter instructions"
             value={instructions}
             onChange={(e) => setInstructions(e.target.value)}
           />
         </label>
-        <hr />
+        </div>
+        
 
+        <div className="relative z-0 w-full mb-5 group">
         <label>
-          Image:
           <input
             type="text"
             name="image"
             placeholder="enter image URL"
+            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             value={image}
             onChange={(e) => setImage(e.target.value)}
           />
         </label>
-        <hr />
+        </div>
+        
 
+        <div className="relative z-0 w-full mb-5 group">
         <label>
-          Youtube link:
           <input
             type="text"
             name="youtube"
+            className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder="enter YouTube link"
             value={youtube}
             onChange={(e) => setYoutube(e.target.value)}
           />
         </label>
-        <hr />
+        </div>
+        
 
         <button>Create Menu</button>
       </form>
