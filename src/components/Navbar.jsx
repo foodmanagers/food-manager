@@ -9,7 +9,7 @@ function Navbar({ callbackToAdmin, admin, cartItems }) {
   return (
     <div>
 
-      <div className="navbar bg-base-100 fixed top-0 left-0 right-0 pb-5">
+      <div className="navbar bg-blue-800 fixed top-0 left-0 right-0 pb-5">
         <div className="flex-1">
           <button className="btn btn-ghost text-xl">
             <NavLink to="/">
