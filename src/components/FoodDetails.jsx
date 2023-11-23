@@ -67,7 +67,7 @@ function FoodDetails({ admin }) {
   }, [foodDetails]);
 
   return (
-    <div className="details-page">
+    <div>
       {editMode ? (
         <div>
           <label>
@@ -151,30 +151,33 @@ function FoodDetails({ admin }) {
 
           <button onClick={editSubmit}>Save Changes</button>
           <button onClick={editToggle}>Cancel Edit</button>
-        </div>
+          </div>
       ) : (
-        // Display mode
-        <div>
+          // Display mode
+          <div   className="card lg:card-side bg-base-100 shadow-xl mt-10 mb-2">
+          <figure><img className="w-screen h-auto" src={foodDetails.image}/></figure>
+          
           {foodDetails ? (
-            <>
-              <h2>{foodDetails.name}</h2>
+           <div className="card-body">
+           <>
+              <h2 className="card-title justify-center">{foodDetails.name}</h2>
               <p>{foodDetails.country}</p>
-              <img src={foodDetails.image} alt={foodDetails.name} />
-              <p>Description: {foodDetails.instructions}</p>
-              <iframe
-                width="420"
-                height="315"
-                src="https://www.youtube.com/embed/tgbNymZ7vqY"
-              ></iframe>
+              <p className="ml-8">{foodDetails.instructions}</p>
+              
               <br />
 
               {admin && (
                 <>
-                  <button onClick={editToggle}>Edit</button>
-                  <button onClick={deleteFunction}>Delete</button>
+                  <div className="card-actions justify-end">
+                  <button className="btn btn-primary mr-2" onClick={editToggle}>Edit</button>
+                  <button className="btn btn-primary ml-2" onClick={deleteFunction}>Delete</button>
+                  </div>
                 </>
+                
               )}
+              
             </>
+            </div>
           ) : (
             <p>loading...</p>
           )}

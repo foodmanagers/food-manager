@@ -87,7 +87,7 @@ function Catalog({ addToCart, showAlert, admin }) {
                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-            <span>Your purchase has been confirmed!</span>
+            <span className="pl-16">Dish was added to Cart !</span>
           </div>
         )}
       </div>

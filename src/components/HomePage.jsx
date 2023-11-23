@@ -5,8 +5,9 @@ function HomePage () {
         <div className="homepagebox">
         <section className="food-manager-app">
             <div className="app-title">
-            <h1>Food Manager App</h1>
-            <p>Efficiently manage your corporate food needs</p>
+            <h1>Foodsie</h1>
+            <h3>The Food Manager App of the year !</h3>
+            <p>Efficiently manage your clients food orders</p>
             </div>
             </section>
 
