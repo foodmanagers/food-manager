@@ -28,17 +28,17 @@
 }
 
 .app-title h1 {
-  color: rgb(0, 0, 0);
-  text-shadow: rgba(255, 255, 255, 1) 0px 0px 5px;
-  font-size: 32px;
+  color: rgb(55, 117, 175);
+  text-shadow: rgb(0, 0, 0) 0px 0px 5px;
+  font-size: 42px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .app-title h3 {
-  color: rgb(65, 97, 145);
-  text-shadow: rgb(51, 51, 51) 0px 0px 5px;
-  font-size: 20px;
+  color: rgb(255, 255, 255);
+  text-shadow: rgb(50, 105, 187) 0px 0px 5px;
+  font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }

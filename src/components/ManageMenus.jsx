@@ -28,7 +28,7 @@ function ManageMenus({ admin }) {
         <h1 className="mb-10">Manager Menu</h1>
         {admin && (
           <Link to="/managemenus/create">
-            <button className="mb-4 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mx-2">
+            <button className="mb-4 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-cyan-950 rounded-lg hover:bg-cyan-950 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-cyan-950 dark:hover:bg-cyan-950 dark:focus:ring-blue-800 mx-2">
               Create
             </button>
           </Link>

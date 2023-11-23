@@ -11,27 +11,27 @@ function HomePage () {
             <div className="app-title">
             <h1>Foodsie</h1>
             <h3>The Food Manager App of the year !</h3>
-            <p>Efficiently manage your clients food orders</p>
+            hr
             </div>
             </section>
 
             <section className="function-boxes ">
-            <div className="little-box glass bg-blue-800">
+            <div className="little-box glass bg-cyan-950">
             <h2>Catalog</h2>
             <div><p>Elegant menu display for clients</p></div>
             </div>
-            <div className="little-box glass bg-blue-800">
+            <div className="little-box glass bg-cyan-950">
             <h2>Details Page</h2>
             <p>Informative dish details</p>
             </div>
-            <div className="little-box glass bg-blue-800">
+            <div className="little-box glass bg-cyan-950">
             <h2>Management</h2>
             <p>Create, edit or delete your Menus</p>
             </div>
             </section>
             </div>
         <br />
-            <footer className="glass bg-blue-800" >
+            <footer className="glass bg-cyan-950" >
                 <h2>Start Managing Your Corporate Food Today !</h2>
                 <hr />
                 <p>Get started with our Food Manager app</p>

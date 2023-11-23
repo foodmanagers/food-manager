@@ -150,8 +150,8 @@ function FoodDetails({ admin }) {
             />
           </label>
 
-          <button className="glass mt-2 bg-blue-800" onClick={editSubmit}>Save</button>
-          <button className="glass mt-2 bg-blue-800" onClick={editToggle}>Cancel</button>
+          <button className="glass mt-2 bg-cyan-950" onClick={editSubmit}>Save</button>
+          <button className="glass mt-2 bg-cyan-950" onClick={editToggle}>Cancel</button>
         </div>
       ) : (
         // Display mode
@@ -176,13 +176,13 @@ function FoodDetails({ admin }) {
                   <>
                     <div className="card-actions justify-end">
                       <button
-                        className="glass mt-2 bg-blue-800"
+                        className="glass mt-2 bg-cyan-950"
                         onClick={editToggle}
                       >
                         Edit
                       </button>
                       <button
-                        className="glass mt-2 bg-blue-800"
+                        className="glass mt-2 bg-cyan-950"
                         onClick={deleteFunction}
                       >
                         Delete

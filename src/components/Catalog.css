@@ -4,7 +4,7 @@
   bottom: 10px; 
   left: 50%;
   transform: translateX(-50%); /* Move the alert on x axys */
-  background-color: #4caf50;
+  background-color: #000000;
   color: white;
   padding: 10px;
   border-radius: 5px;
