@@ -38,7 +38,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <Navbar callbackToAdmin={roleToggle} admin={admin} />
+        <Navbar callbackToAdmin={roleToggle} admin={admin} cartItems={cartItems} />
 
         <Routes>
           <Route path="/" element={<HomePage />} />
