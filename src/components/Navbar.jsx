@@ -1,8 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import homeicon from "../assets/home-icon.png";
-import catalog from "../assets/catalog.png";
-import manager from "../assets/manager.png";
+import homeicon from "/assets/home-icon.png";
+import catalog from "/assets/catalog.png";
+import manager from "/assets/manager.png";
 
 
 function Navbar({ callbackToAdmin, admin, cartItems }) {

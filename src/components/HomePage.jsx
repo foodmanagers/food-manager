@@ -32,6 +32,7 @@ function HomePage () {
                 <p>Get started with our Food Manager app</p>
             </footer>
         </div>
+        
     )
 
 }

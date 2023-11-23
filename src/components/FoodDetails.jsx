@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import chef from "../assets/chef.png"; 
+import chef from "/assets/chef.png"; 
 
 function FoodDetails({ admin }) {
   const [foodDetails, setFoodDetails] = useState([]);

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import chef from "../assets/chef.png";
+import chef from "/assets/chef.png";
 
 function CreateMenu() {
   const [name, setName] = useState("");
