@@ -1,8 +1,11 @@
+
+
+
 function Footer() {
   return (
-    <div>
-      <p>©2023</p>
-      <p>All Rights Reserved</p>
+    <div className="pt-6">
+      
+      <p>Copyright © 2023 - All right reserved by</p>
     </div>
   );
 }
