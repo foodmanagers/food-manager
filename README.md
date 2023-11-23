@@ -1,8 +1,17 @@
-# React + Vite
+# FOOD MANAGERS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## DESCRIPTION
 
-Currently, two official plugins are available:
+ Food Managers is a service that brings to the table information about different dishes including pictures and proceed to the purchase if the user is interested. You will even have the posibility of checking out how the plate is done.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ The side of the manager (admin) provides the possibility to create, delete or update the items with a simulated credential reading.
+
+
+ ## HOW TO RUN
+
+ Just open your terminal and install the dependencies with the command **npm i**, after it's loaded run the code in the browser typing again in the terminal **npm run dev**
+
+
+## DEMO
+
+https://food-managers.netlify.app/
